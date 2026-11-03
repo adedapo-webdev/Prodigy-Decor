@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Prodigy Decor and Events, creating refined and memorable event experiences.">
+  <title>About Us | Prodigy Decor and Events</title>
+  <style>
+    :root {
+      --black: #111111;
+      --gold: #c8a45d;
+      --gold-light: #e3cf9b;
+      --ivory: #f8f5ee;
+      --white: #ffffff;
+      --text: #33312d;
+      --muted: #77736b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--ivory); color: var(--text); line-height: 1.7; }
+    a { color: inherit; }
+    .site-header { background: var(--black); color: var(--white); border-bottom: 2px solid var(--gold); }
+    .nav-wrap { width: min(1120px, 92%); margin: 0 auto; min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--gold-light); font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+    .nav-links a { color: var(--white); text-decoration: none; font-size: 0.92rem; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--gold-light); }
+    .page-hero { background: var(--black); color: var(--white); text-align: center; padding: 82px 20px 88px; border-bottom: 1px solid rgba(200, 164, 93, 0.35); }
+    .eyebrow { color: var(--gold-light); font-size: 0.78rem; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+    .page-hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.3rem, 5vw, 4rem); font-weight: normal; line-height: 1.15; margin-bottom: 18px; }
+    .page-hero p { max-width: 650px; margin: 0 auto; color: #e8e4dc; font-size: 1.05rem; }
+    main { width: min(1120px, 90%); margin: 0 auto; padding: 68px 0 78px; }
+    .intro-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: center; }
+    .section-label { color: #98783c; font-size: 0.76rem; font-weight: bold; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; }
+    h2 { color: var(--black); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9rem, 3vw, 2.65rem); font-weight: normal; line-height: 1.25; margin-bottom: 20px; }
+    .intro-copy p { margin-bottom: 16px; }
+    .image-placeholder { min-height: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; text-align: center; color: var(--gold-light); background: linear-gradient(rgba(17,17,17,.72), rgba(17,17,17,.72)), radial-gradient(circle at 30% 20%, #69542f, #25221c 65%); border: 1px solid var(--gold); }
+    .image-placeholder strong { font-family: Georgia, "Times New Roman", serif; font-size: 1.7rem; font-weight: normal; margin-bottom: 8px; }
+    .image-placeholder span { color: #e8e0cf; font-size: 0.9rem; }
+    .values { margin-top: 76px; padding-top: 56px; border-top: 1px solid #ddd4c2; }
+    .values-heading { max-width: 650px; margin: 0 auto 34px; text-align: center; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .value-card { background: var(--white); padding: 28px 25px; border-top: 3px solid var(--gold); box-shadow: 0 8px 24px rgba(0,0,0,.04); }
+    .value-card h3 { font-family: Georgia, "Times New Roman", serif; color: var(--black); font-size: 1.3rem; font-weight: normal; margin-bottom: 10px; }
+    .value-card p { color: var(--muted); font-size: .95rem; }
+    .closing-cta { margin-top: 68px; background: var(--black); color: var(--white); text-align: center; padding: 48px 24px; }
+    .closing-cta h2 { color: var(--white); margin-bottom: 12px; }
+    .closing-cta p { max-width: 610px; margin: 0 auto 24px; color: #e8e4dc; }
+    .cta-link { display: inline-block; padding: 12px 24px; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; letter-spacing: .5px; transition: background .2s ease, color .2s ease; }
+    .cta-link:hover { background: var(--gold); color: var(--black); }
+    footer { background: #090909; color: #d8d3c9; text-align: center; padding: 24px 18px; font-size: .85rem; }
+    footer span { color: var(--gold-light); }
+    @media (max-width: 760px) {
+      .nav-wrap { padding: 18px 0; flex-direction: column; justify-content: center; }
+      .nav-links { justify-content: center; gap: 12px 18px; }
+      .page-hero { padding: 62px 20px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 30px; }
+      .image-placeholder { min-height: 260px; }
+      .values-grid { grid-template-columns: 1fr; }
+      main { padding: 48px 0 58px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Prodigy Decor &amp; Events</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>+
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <p class="eyebrow">Who We Are</p>
+    <h1>Thoughtful Details.<br>Memorable Experiences.</h1>
+    <p>We bring people together through considered design, beautiful spaces, and carefully planned events.</p>
+  </section>
+
+  <main>
+    <section class="intro-grid">
+      <div class="intro-copy">
+        <p class="section-label">About Prodigy</p>
+        <h2>Creating occasions that feel unmistakably yours.</h2>
+        <p>Prodigy Decor and Events is dedicated to transforming ideas into welcoming, polished, and memorable experiences. From intimate celebrations to professional gatherings, we approach every event with care, creativity, and attention to detail.</p>
+        <p>Our work brings together thoughtful styling, practical planning, and a clear understanding of each client's vision. We believe an event should look beautiful, feel effortless for its host, and leave guests with something special to remember.</p>
+        <p>Whether you are planning a wedding, a social celebration, a corporate event, or looking to develop your event skills through training, we work with you to bring your vision to life.</p>
+      </div>
+      <div class="image-placeholder" role="img" aria-label="Decorative placeholder for a Prodigy event photograph">
+        <strong>Your Event Story</strong>
+        <span>Replace this panel with one of your event photos.</span>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="values-heading">
+        <p class="section-label">What Guides Us</p>
+        <h2>Our Approach</h2>
+        <p>Good events are built on more than appearances. They come from listening, thoughtful preparation, and care in every detail.</p>
+      </div>
+      <div class="values-grid">
+        <article class="value-card">
+          <h3>Personalised Design</h3>
+          <p>We listen to your ideas and shape the styling around your occasion, taste, and priorities.</p>
+        </article>
+        <article class="value-card">
+          <h3>Attention to Detail</h3>
+          <p>From the overall look to the finishing touches, we aim for a cohesive and considered result.</p>
+        </article>
+        <article class="value-card">
+          <h3>Calm Coordination</h3>
+          <p>We value clear communication and careful planning to help your event run smoothly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-cta">
+      <h2>Let's create something memorable.</h2>
+      <p>Tell us what you are planning, and let's explore how Prodigy Decor and Events can help bring it together.</p>
+      <a class="cta-link" href="contact.html">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <span>Prodigy Decor and Events</span>.
+      <br>
+       All rights reserved.</p>
+  </footer>
+</body>
+</html>

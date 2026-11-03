@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore event styling and celebrations by Prodigy Decor and Events.">
+  <title>Gallery | Prodigy Decor &amp; Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #151411;
+      --gold: #c6a15b;
+      --ivory: #f8f5ee;
+      --dark-bg: #222222;
+      --muted: #77736b;
+      --line: #e8e0d2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--ivory);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .site-header {
+      min-height: 58px;
+      padding: 14px 7.5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--black);
+      color: var(--ivory)
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(18px, 2vw, 23px);
+      color: var(--gold);
+      white-space: nowrap
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.2vw, 27px)
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      transition: color .2s
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold)
+    }
+
+    .gallery-hero {
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      padding: 40px;
+      color: var(--ivory);
+      background: linear-gradient(90deg, rgba(15, 14, 12, .98) 0%, rgba(15, 14, 12, .88) 35%, rgba(15, 14, 12, .22) 100%), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat
+    }
+
+    .hero-copy {
+      max-width: 510px
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px
+    }
+
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      line-height: 1.15
+    }
+
+    .gallery-hero h1 {
+      font-size: clamp(36px, 5vw, 55px);
+      margin-bottom: 17px
+    }
+
+    .gallery-hero h1 em {
+      display: block;
+      color: var(--gold);
+      font-weight: 500
+    }
+
+    .hero-copy>p:last-of-type {
+      max-width: 390px;
+      font-size: 13px;
+      color: #e0dbd2
+    }
+
+    .gold-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 24px
+    }
+
+    .gallery-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 35px;
+      background: var(--dark-bg);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 1.23/1;
+      background: #ddd4c6;
+      isolation: isolate;
+    }
+
+    .gallery-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .55s;
+      z-index: -1
+    }
+
+    .gallery-card:after {
+      content: "";
+      position: absolute;
+      inset: 45% 0 0;
+      background: linear-gradient(transparent, rgba(10, 10, 9, .9));
+      z-index: -1
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.045)
+    }
+
+    .card-label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 11px 15px;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 15px
+    }
+
+    .card-label span {
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 21px
+    }
+
+    .space-feature {
+      min-height: 245px;
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      background: var(--black);
+      color: var(--ivory)
+    }
+
+    .space-copy {
+      padding: 42px 10%;
+      align-self: center
+    }
+
+    .space-copy .gold-rule {
+      margin: 0 0 17px
+    }
+
+    .space-copy h2 {
+      font-size: clamp(28px, 3.6vw, 40px)
+    }
+
+    .space-copy h2 em {
+      color: var(--gold)
+    }
+
+    .space-copy p {
+      max-width: 340px;
+      margin-top: 13px;
+      color: #d1cbc0;
+      font-size: 12px
+    }
+
+    .space-image {
+      min-height: 245px;
+      background: linear-gradient(90deg, var(--black), rgba(21, 20, 17, .05) 48%), url('https://images.unsplash.com/photo-1507504031003-b417219a0dde?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat
+    }
+
+    .perfect-event {
+      position: relative;
+      overflow: hidden;
+      padding: 27px 90px 30px;
+      text-align: center;
+      background: #f0e8da;
+      isolation: isolate;
+      color: var(--black);
+    }
+
+    .perfect-event .eyebrow {
+      margin-bottom: 7px;
+      font-size: 9px;
+      letter-spacing: 2.5px
+    }
+
+    .perfect-event h2 {
+      font-size: clamp(25px, 3vw, 33px)
+    }
+
+    .perfect-event::before,
+    .perfect-event::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      width: 100px;
+      height: 100px;
+      opacity: .82;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      pointer-events: none;
+    }
+
+    .perfect-event::before {
+      left: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 110' fill='none' stroke='%23c6a15b' stroke-width='1.05' stroke-linecap='round'%3E%3Cpath d='M-8 108 Q20 72 83 9 M7 95 Q8 66 1 50 Q25 62 22 80 M21 80 Q19 48 38 31 Q42 57 21 80 M36 65 Q34 35 62 17 Q63 43 36 65 M-1 108 Q34 89 64 88 M17 92 Q32 65 55 58 Q50 80 17 92 M-2 109 Q3 78 16 60'/%3E%3C/svg%3E");
+    }
+
+    .perfect-event::after {
+      right: 0;
+      transform: translateY(-50%) scaleX(-1);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 110' fill='none' stroke='%23c6a15b' stroke-width='1.05' stroke-linecap='round'%3E%3Cpath d='M-8 108 Q20 72 83 9 M7 95 Q8 66 1 50 Q25 62 22 80 M21 80 Q19 48 38 31 Q42 57 21 80 M36 65 Q34 35 62 17 Q63 43 36 65 M-1 108 Q34 89 64 88 M17 92 Q32 65 55 58 Q50 80 17 92 M-2 109 Q3 78 16 60'/%3E%3C/svg%3E");
+    }
+
+    .gallery-footer {
+      padding: 18px 20px;
+      text-align: center;
+      background: var(--black);
+      color: #d1cbc0;
+      font-size: 10px
+    }
+
+    .gallery-footer span {
+      color: var(--gold)
+    }
+
+    @media(max-width:760px) {
+      .site-header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px
+      }
+
+      .gallery-hero {
+        min-height: 300px;
+        padding: 45px 7%;
+        background-position: 62% center
+      }
+
+      .gallery-section {
+        padding: 22px 5% 30px
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px
+      }
+
+      .card-label {
+        padding: 9px 10px;
+        font-size: 13px
+      }
+
+      .space-feature {
+        grid-template-columns: 1fr
+      }
+
+      .space-copy {
+        padding: 32px 7%
+      }
+
+      .space-image {
+        min-height: 220px
+      }
+    }
+
+    @media(max-width:460px) {
+      .gallery-grid {
+        grid-template-columns: 1fr
+      }
+
+      .gallery-hero h1 {
+        font-size: 36px
+      }
+
+      .perfect-event {
+        padding: 25px 52px 28px
+      }
+
+      .perfect-event::before,
+      .perfect-event::after {
+        width: 58px;
+        height: 76px;
+        opacity: .7
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Prodigy Decor &amp; Events</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a
+        href="gallery.html" class="active" aria-current="page">Gallery</a><a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="gallery-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Our Gallery</p>
+        <h1>Moments of Beauty,<em>Styled with Purpose.</em></h1>
+        <p>Explore a collection of our most memorable moments. Each event tells a story — of creativity, elegance and
+          the perfect setting.</p>
+        <div class="gold-rule"></div>
+      </div>
+    </section>
+    <section class="gallery-section" aria-label="Event gallery">
+      <div class="gallery-grid">
+        <a class="gallery-card" href="weddings-corporate-events.html" aria-label="Enquire about weddings"><img
+            src="image/weddings & corporate-events/weddings & corporate-events 4.jpg"
+            alt="Wedding ceremony floral arch">
+          <div class="card-label">Weddings & Corporate Events <span>⟶</span></div>
+        </a>
+        
+
+        <a class="gallery-card" href="decor-details.html" aria-label="Enquire about setting detaails"><img
+            src="image/decor-details/decor-details 5.jpg"
+            alt="Elegant dinner table setting">
+          <div class="card-label">Decor-Details <span>⟶</span></div>
+        </a>
+
+        <a class="gallery-card" href="event-decoration-venue-styling.html"
+          aria-label="Enquire about venue styling"><img
+            src="image/event decoration & venue styling/event decoration & venue styling 3.jpg"
+            alt="Styled venue with floral arrangements">
+          <div class="card-label">Event Decoration & Venue Styling <span>⟶</span></div>
+        </a>
+
+        <a class="gallery-card" href="behind-the-scenes.html" aria-label="View behind the scenes"><img
+            src="image/behind the scenes/behind the scenes 5.jpg"
+            alt="Decor details and candlelight">
+          <div class="card-label">Behind the Scenes <span>⟶</span></div>
+        </a>
+
+      </div>
+    </section>
+    <section class="space-feature">
+      <div class="space-copy">
+        <div class="gold-rule"></div>
+        <h2>Beautiful Space<br><em>is a Thoughtful Plan.</em></h2>
+        <p>We don’t just decorate spaces — we create experiences that feel personal, stylish, and unforgettable.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="space-image" role="img" aria-label="Elegant lounge area with warm lighting and floral decor"></div>
+    </section>
+    <section class="perfect-event">
+      <p class="eyebrow"></p>
+      <h2>Your Perfect Event Awaits.</h2>
+    </section>
+  </main>
+  <footer class="gallery-footer">
+    <p>&copy; <span>2026 Prodigy Decor and Events</span>.
+      <br>
+       All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
